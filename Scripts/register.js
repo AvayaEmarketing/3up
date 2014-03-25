@@ -33,8 +33,9 @@ function putInformation(formulario) {
         success: function (resultado) {
             if (resultado.d !== "fail") {
                 mensaje("thanks for fill our form", "Avaya Form", "danger");
+                limpiarFormulario(getForm());
             } else {
-                mensaje("Alert, please try again", "Avaya Survey", "danger");
+                mensaje("Alert, please try again", "Avaya Form", "danger");
             }
         }
     });
@@ -46,12 +47,12 @@ $(document).ready(function () {
     $("#submit").click(function () {
         $.prettyLoader();
         var formulario = getForm();
-       // var validado = validar(formulario);
-        //if (validado) {
+        var validado = validar(formulario);
+        if (validado) {
             putInformation(formulario);
-        //} else {
-            //mensaje("Please check the required fields or email format", "Avaya Survey", "danger");
-        //}
+        } else {
+            mensaje("Please check the required fields or email format", "Avaya Form", "danger");
+        }
 
     });
 
