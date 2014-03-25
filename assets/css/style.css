@@ -54,3 +54,12 @@ h2{
 input{
 	font-family: 'proximanova-lihgt';
 }
+
+.imgheader img{
+	width: 100%;
+}
+
+.legal{
+	font-size: 12px;
+
+}

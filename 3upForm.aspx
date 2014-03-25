@@ -13,21 +13,23 @@
 </head>
 <body>
     <div class="container">
-<<<<<<< HEAD
+
         
         <div class="rowfluid">
             <div class="span12">
+                <br/>
                 <img src="assets/img/avaya.jpg" alt="">
             </div>
         </div>
-        <br><br>
+
+        <br/><br/>
+
         <div class="rowfluid">
-            <div class="span12">
+            <div class="span12 imgheader">
                 <img src="assets/img/3up.jpg" alt="">
             </div>
         </div>
-=======
->>>>>>> FETCH_HEAD
+
         <h2>Tell us about your company </h2>
         <div class="form-horizontal">
 
@@ -182,7 +184,7 @@
                     </div>
 
                  <div class="form-group">
-                        <label class="col-lg-5 control-label" for="competiting1">Who are you competitingagainst?: </label>
+                        <label class="col-lg-5 control-label" for="competiting1">Who are you competiting against?: </label>
                         <div class="col-lg-5">
                             <textarea id="competiting" name="competiting1" rows="3" class="form-control" ></textarea>
                         </div>
@@ -218,7 +220,18 @@
 
         </div>
     </div>
-
+    <hr>
+<div class="container">
+    <div class="rowfluid">
+            <div class="span12 legal">
+                <br><br>
+                
+                <p><font size="1" face="arial" color="#999999">&copy;2014 Avaya Inc. All Rights Reserved, Avaya, the Avaya Logo, and all trademarks identified by ®,   TM or SM are registered trademarks, trademarks, or service marks of Avaya Inc,   and may be registered in certain jurisdictions. All other trademarks are the   property of their respective owners.</font><font size="1" face="arial" color="#999999"><br />
+              <br />
+    <a href="http://www.avaya.com/gcm/master-usa/en-us/includedcontent/termsofuse.htm" target="_blank"><font color="#999999" size="1" face="arial">Terms of Use</font></a> | <a href="http://www.avaya.com/gcm/master-usa/en-us/includedcontent/privacy.htm" target="_blank"><font color="#999999" size="1" face="arial">Privacy Statement</font></a></font></p>
+            </div>
+    </div>
+</div>
     <script type="text/javascript" src="Scripts/jquery.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap-dialog.js"></script>
