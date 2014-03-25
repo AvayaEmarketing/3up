@@ -37,14 +37,18 @@
 }
 
 
-body, html{
+body, html, label{
 	font-family: 'proximanova-regular';
 	letter-spacing: -1px;
 	font-size: 14px;
+	color: #666;
+	font-weight: normal;
 }
 
 h2{
-	color: #c00;
+	font-family: 'proxima_nova_rgbold';
+	color: #666;
+	font-size: 32px; 
 }
 
 input{

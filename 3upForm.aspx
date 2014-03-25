@@ -16,7 +16,7 @@
     <div class="container">
         <div class="rowfluid">
             <div class="span12">
-                hola
+                <img src="assets/img/3up.jpg" alt="">
             </div>
         </div>
         <h2>Tell us about your company </h2>
@@ -144,6 +144,8 @@
                     </div>
 
                 </div>
+
+                <hr/>
                 <!-- fin de la segunda columna -->
 
                   <h2>Please tell us about this opportunity:</h2>
