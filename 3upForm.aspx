@@ -14,6 +14,13 @@
 <body>
     <div class="container">
 <<<<<<< HEAD
+        
+        <div class="rowfluid">
+            <div class="span12">
+                <img src="assets/img/avaya.jpg" alt="">
+            </div>
+        </div>
+        <br><br>
         <div class="rowfluid">
             <div class="span12">
                 <img src="assets/img/3up.jpg" alt="">
