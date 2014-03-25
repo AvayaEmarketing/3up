@@ -10,15 +10,17 @@
     <%--<link rel="stylesheet" href="Content/bootstrap-theme.min.css" />--%>
     <link href="Content/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
     <link href="Content/prettyLoader.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="container">
+<<<<<<< HEAD
         <div class="rowfluid">
             <div class="span12">
                 <img src="assets/img/3up.jpg" alt="">
             </div>
         </div>
+=======
+>>>>>>> FETCH_HEAD
         <h2>Tell us about your company </h2>
         <div class="form-horizontal">
 
@@ -126,6 +128,7 @@
                     </div>
 
                     <div class="form-group"  >
+                        <div><a href="https://fedsso-helper.avaya.com/FMLogin.jsp?TYPE=33554433&REALMOID=06-e6e3e8b2-0ff2-113e-bdf9-85343f360000&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=-SM-7HSIVmC5bO2WByLX8OgBaZupMbR1a8r%2fRObXUKPQgX0nv5ESNVBgxnBwp1H0S5mg&TARGET=-SM-HTTPS%3a%2f%2ffedsso--helper%2eavaya%2ecom%2fsaml--sfdc--project%2fuserType--sfdc%2ejsp%3fSMASSERTIONREF%3dQUERY%26SPID%3dhttps%3a%2f%2fwithorgid%2esalesforce%2ecom%26RelayState%3d-%2Fapex-%2Fsp_ViewDetailPage-%3Fc-%3Da3da0000000LL9zAAG-%26Id-%3Da3ja0000000LS4DAAW" target="_blank">Click here to access Checklist ítems </a> </div>
                         <label class="col-lg-5 control-label">3Up! Checklists Completed?</label>
                         <div class="col-lg-5" id="completed">
                             <div  >
