@@ -22,7 +22,8 @@ function putInformation(formulario) {
         'firstName': formulario.firstName, 'lastName': formulario.lastName, 'certifications': formulario.certifications, 'linkID': formulario.linkID,
         'companyState': formulario.companyState, 'companyRegion': formulario.companyRegion, 'CSENumber': formulario.CSENumber, 'email': formulario.email, 'phone': formulario.phone,
         'checklist': formulario.checklist, 'opportunity': formulario.opportunity, 'presentationDate': formulario.presentationDate, 'sales': formulario.sales,
-        'competiting': formulario.competiting, 'solution': formulario.solution, 'resource': formulario.resource, 'session': formulario.session
+        'customerAudience': formulario.customerAudience, 'contactCustomer': formulario.contactCustomer, 'competiting': formulario.competiting,
+        'solution': formulario.solution, 'demoResource': formulario.demoResource, 'resource': formulario.resource, 'session': formulario.session
     };
     $.ajax({
         type:"POST",
@@ -33,7 +34,7 @@ function putInformation(formulario) {
         success: function (resultado) {
             if (resultado.d !== "fail") {
                 mensaje("thanks for fill our form", "Avaya Form", "danger");
-                limpiarFormulario(getForm());
+				//document.location.href="3upForm.aspx"
             } else {
                 mensaje("Alert, please try again", "Avaya Form", "danger");
             }
@@ -43,7 +44,19 @@ function putInformation(formulario) {
 }
 
 $(document).ready(function () {
-   
+
+    $('.multiselect').multiselect({
+        buttonWidth: '210px'
+    });
+
+    $('#time1').datetimepicker({
+        pickTime: false
+    });
+
+    $('#time2').datetimepicker({
+        pickTime: false
+    });
+
     $("#submit").click(function () {
         $.prettyLoader();
         var formulario = getForm();
@@ -73,13 +86,13 @@ function validar(obj) {
     var respuesta = 0;
     for (var i in obj) {
         if (obj[i] == null || obj[i].length < 1 || /^\s+$/.test(obj[i])) {
-            //if (i == "q11") {
-              //  respuesta = respuesta + 0;
-              //  $("#" + i).css('background', '#FFF');
-            //} else {
+            if (i === "checklist") {
+                respuesta = respuesta + 0;
+                $("#" + i).css('background', '#FFF');
+            } else {
                 respuesta = respuesta + 1;
                 $("#" + i).css('background', '#FAE0E0');
-           // }
+            }
 
         } else {
             $("#" + i).css('background', '#FFF');
@@ -113,7 +126,11 @@ function getForm() {
     var CAMName = $("#CAMName").val();
     var firstName = $("#firstName").val();
     var lastName = $("#lastName").val();
-    var certifications = $("#certifications").val();
+    var certifications1 = $("#certifications").val();
+    var certifications = "";
+    for (var i = 0; i < certifications1.length; i++) {
+        certifications += certifications1[i]+", ";
+    }
     var linkID = $("#linkID").val();
     var companyState = $("#companyState").val();
     var companyRegion = $("#companyRegion").val();
@@ -132,8 +149,15 @@ function getForm() {
     var opportunity = $("#opportunity").val();
     var presentationDate = $("#presentationDate").val();
     var sales = $("#sales").val();
+    var customerAudience1 = $("#customerAudience").val();
+    var customerAudience = "";
+    for (var i = 0; i < customerAudience1.length; i++) {
+        customerAudience += customerAudience1[i] + ", ";
+    }
+    var contactCustomer = $("#contactCustomer").val();
     var competiting = $("#competiting").val();
     var solution = $("#solution").val();
+    var demoResource = $("#demoResource").val();
     var resource = $("#resource").val();
     var session = $("#session").val();
 
@@ -156,8 +180,11 @@ function getForm() {
     formulario.opportunity = opportunity;
     formulario.presentationDate = presentationDate;
     formulario.sales = sales;
+    formulario.customerAudience = customerAudience;//nuevo campo, enviar por POST
+    formulario.contactCustomer = contactCustomer;//nuevo campo, enviar por POST
     formulario.competiting = competiting;
     formulario.solution = solution;
+    formulario.demoResource = demoResource;//nuevo campo, enviar por POST
     formulario.resource = resource;
     formulario.session = session;
     return formulario;
